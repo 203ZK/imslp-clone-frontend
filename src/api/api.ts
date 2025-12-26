@@ -47,7 +47,7 @@ export async function fetchMirroredLink(imslpKey: string, link: string): Promise
   const encodedLink1 = link.slice(8, 13) + "IMSLP" + imslpKey + "-" + link.slice(13);
   const encodedLink2 = link.slice(8, 13) + "IMSLP0" + imslpKey + "-" + link.slice(13);
 
-  const path = "http://localhost:3000/score";
+  const path = import.meta.env.VITE_BACKEND_URL + "/score";
 
   const mirroredLink1: MirroredLinkApiResponse = await fetchApi(path, {
     method: "POST",
