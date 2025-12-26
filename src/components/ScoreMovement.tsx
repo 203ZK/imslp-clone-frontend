@@ -14,7 +14,6 @@ const titleStyles = {
 };
 
 const ScoreMovement = ({ movementTitle, arrangements, handleOpen }: ScoreMovementProps) => {
-  console.log(arrangements);
   return (
     
     <Box mt='1.5rem'>
